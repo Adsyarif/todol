@@ -1,0 +1,18 @@
+services:
+  api-gateway:
+    build: ./server/api-gateway
+    ports:
+      - "3000:3000"
+    depends_on:
+      - auth
+      - task
+
+  auth:
+    build: ./server/services/auth
+    ports:
+      - "3001:3001"
+
+  task:
+    build: ./server/services/task
+    ports:
+      - "3002:3002"

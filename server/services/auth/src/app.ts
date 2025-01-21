@@ -32,7 +32,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use("/v1/auth", authRoute);
+app.use("/", authRoute);
 
 app.get("/", (_req, res) => {
   res.send("Hello");

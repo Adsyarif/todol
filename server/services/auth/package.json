@@ -2,10 +2,11 @@
   "name": "todol-app",
   "version": "1.0.0",
   "description": "service for todo list task",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon dist/server.js"
+    "start": "nodemon dist/server.js",
+    "build": "tsc"
   },
   "author": "Adrisa",
   "license": "ISC",
