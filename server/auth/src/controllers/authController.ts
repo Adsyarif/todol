@@ -85,7 +85,7 @@ export const loginUser: RequestHandler = (req, res, next) => {
       if (!user) {
         return res.status(401).json({
           status: 401,
-          message: info?.message || "Authentication failed",
+          message: info?.message || "Authentication failed.",
         });
       }
 
@@ -93,7 +93,7 @@ export const loginUser: RequestHandler = (req, res, next) => {
         if (loginErr) return next(loginErr);
         res.status(200).json({
           status: 200,
-          message: "Login successful",
+          message: "Login successful.",
           data: { id: user.id, name: user.name, email: user.email },
         });
       });
